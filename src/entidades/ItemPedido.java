@@ -47,8 +47,12 @@ public class ItemPedido {
 
 	@Override
 	public String toString() {
-		return produto.getNome();
+		return produto.getNome()
+				       + ", $"
+				       + String.format("%.2f", preco)
+				       + ", Quantidade: "
+				       + quantidade
+				       + ", Subtotal: $"
+				       + String.format("%.2f", subTotal());
 	}
-	
-	
 }
